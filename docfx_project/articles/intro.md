@@ -35,7 +35,7 @@ First of all we need to be a little bit more abstract. Why we use tensors? Becau
 
 With this in mind we easily can understand the NDStorage of NumSharp. 
 
-NDStorage is an object which stores the data of a tesor in a single 1D array. Since it is a 1D array independend of the tensor dimension NDStorage can be used for all kind of tensors. A vector is stored inside a 1D array, a matrix, a 3 dimensional tensor and so on. 
+NDStorage is an object which stores the data of a tensor in a single 1D array. Since it is a 1D array independend of the tensor dimension NDStorage can be used for all kind of tensors. A vector is stored inside a 1D array, a matrix, a 3 dimensional tensor and so on. 
 
 **But hold on! How the data comes into this 1D arrayand how we get them back?**
 
