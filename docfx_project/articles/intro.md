@@ -37,11 +37,11 @@ With this in mind we easily can understand the NDStorage of NumSharp.
 
 NDStorage is an object which stores the data of a tesor in a single 1D array. Since it is a 1D array independend of the tensor dimension NDStorage can be used for all kind of tensors. A vector is stored inside a 1D array, a matrix, a 3 dimensional tensor and so on. 
 
-**But hold on! How the data comes into this 1D arrayand how we get them back?**
+**But hold on! How the data comes into this 1D array and how we get them back?**
 
 NDStorage has a property called "shape". The shape is a small but important class in NumSharp. It stores the dimensions and most important! it determines which element in the 1D array is selected by given indexes.
 
-To understand the methods for determines 1D internal storage index by NDArray indexes and vice versa we give examples of different tensor types.
+To understand the methods for determining 1D internal storage index by NDArray indexes and vice versa we give examples of different tensor types.
 
 **Vector**
 
@@ -53,9 +53,9 @@ Here it is a little bit more tricky. Each data element is stored by 2 indexes li
 
 Indeed there is! 
 
-Not just in NumSharp but also in many other frameworks, libs or (general spoken) languages it is good style to store the elements of a matrix row wise or column wise into a 1D array. For a more professional description you can check https://en.wikipedia.org/wiki/Row-_and_column-major_order. Row wise Layout and column wise layout often also called row major and column major. 
+Not just in NumSharp but also in many other frameworks, libs or (general spoken) languages it is good style to store the elements of a matrix row wise or column wise into a 1D array. For a more professional description you can check https://en.wikipedia.org/wiki/Row-_and_column-major_order. Row wise Layout and column wise layout are often also called row major and column major. 
 
-General spoken when imagine a matrix as a table - Row wise means that you start with element [0,0] (as your first element in 1D array) and take elements from columns of 1st row (and store them in the 1D array) until all elements of the 1st row are stored inside the 1D array. You go on with the 2nd row - take element [1,0],[1,1],[1,2],...,[1,n-1]. Go on with this pattern until all elements are inside the 1D array. 
+General spoken when we imagine a matrix as a table - Row wise means that you start with element [0,0] (as your first element in 1D array) and take elements from columns of 1st row (and store them in the 1D array) until all elements of the 1st row are stored inside the 1D array. You go on with the 2nd row - take element [1,0],[1,1],[1,2],...,[1,n-1]. Go on with this pattern until all elements are inside the 1D array. 
 
 Column wise also starts with the element [0,0] but! it stays in the 1st column and takes elements along the rows until all elements from 1st column is stored. Repeat this with 2nd column, 3rd and so on. 
 
